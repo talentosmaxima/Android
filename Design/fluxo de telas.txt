@@ -1,0 +1,20 @@
+1 - Splash
+2 - Menu principal
+	No menu principal ao tocar na opção Clientes direcionar para a tela Dados do cliente
+3 - Dados do cliente
+	A seta da toolbar deve voltar para o menu principal
+	O botão Verificar status do cliente tem que exibir o snackbar com o status (tela 3.1)
+	O bottom navigation deve levar às telas de Histórico de pedidos, Alvarás ou Dados do Cliente
+3.1 - Snackbar de status
+3.2 - Histórico de pedidos
+	O menu deve abrir a opção de legendas (tela 3.3)
+	A pesquisa deve abrir o campo de pesquisa textual
+	A seta da toolbar deve voltar voltar para a tela anterior
+	O bottom navigation deve levar às telas de Histórico de pedidos, Alvarás ou Dados do Cliente
+3.3 - Menu legendas
+	O menu Legendas deve abrir o Dialog com as legendas (tela 3.4)
+3.4 - Dialog Legendas
+	O botão Fechar deve fechar o Dialog
+3.5 - Alvarás
+	A seta da toolbar deve voltar voltar para a tela anterior
+	O bottom navigation deve levar às telas de Histórico de pedidos, Alvarás ou Dados do Cliente
