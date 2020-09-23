@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_cliente"
+        android:icon="@drawable/ic_maxima_pessoa_ativo"
+        android:title="@string/title_dados"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_maxima_historico_pedidos_ativo"
+        android:title="@string/title_hist_pedidos"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_maxima_alvara_ativo"
+        android:title="@string/title_alvaras"
+        android:visible="true" />
+
+</menu>

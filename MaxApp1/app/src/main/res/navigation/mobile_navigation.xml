@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_cliente">
+
+    <fragment
+        android:id="@+id/navigation_cliente"
+        android:name="com.example.maxapp1.ui.home.HomeFragment"
+        android:label="@string/title_dados"
+
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.maxapp1.ui.dashboard.DashboardFragment"
+        android:label="@string/title_hist_pedidos"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.maxapp1.ui.notifications.NotificationsFragment"
+        android:label="@string/title_alvaras"
+        tools:layout="@layout/fragment_notifications" />
+</navigation>

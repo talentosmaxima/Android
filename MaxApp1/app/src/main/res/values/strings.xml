@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MaxApp</string>
+    <string name="title_activity_dados_do_cliente">MainActivity</string>
+    <string name="title_dados">Dados do cliente</string>
+    <string name="title_legendas">Legendas</string>
+    <string name="title_hist_pedidos">Hist.Pedidos</string>
+    <string name="title_alvaras">Alvarás</string>
+    <string name="title_activity_dados_cliente">MainActivity</string>
+    <string name="title_activity_cliente_dados">MainActivity</string>
+      <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_menu_clientes">MainActivity</string>
+    <string name="title_activity_menu_cliente">MainActivity</string>
+
+</resources>

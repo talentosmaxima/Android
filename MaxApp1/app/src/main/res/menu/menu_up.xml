@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/pesquisa"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:iconTint="#000000"
+        android:visible="false"
+        android:title="pesquisa"
+        app:showAsAction="always"/>
+ <item
+        android:id="@+id/legendas"
+        android:title="@string/title_legendas"
+     android:icon="@drawable/ic_maxima_legenda_telemarketing"
+     app:showAsAction="withText"
+     app:actionViewClass="androidx.appcompat.view.menu.ListMenuItemView"
+     android:visible="false"
+     />
+
+
+ </menu>

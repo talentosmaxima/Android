@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5D6DA"
+    tools:context=".view.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ln_clientes"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/ic_bt_arredondado"
+        android:gravity="center"
+        android:onClick="dadosDoCliente"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/img_clientes"
+            android:layout_width="51dp"
+            android:layout_height="68dp"
+            android:src="@drawable/ic_maxima_pessoas" />
+
+        <TextView
+            android:id="@+id/bt_clientes"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="Clientes" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_pedidos"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/ic_bt_arredondado"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/ln_clientes"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/img_pedidos"
+            android:layout_width="51dp"
+            android:layout_height="68dp"
+            android:src="@drawable/ic_maxima_pedido" />
+
+        <TextView
+            android:id="@+id/tx_pedidos"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="Pedidos" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_resumo_venda"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_bt_arredondado"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ln_clientes"
+        tools:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/img_resumo_venda"
+            android:layout_width="51dp"
+            android:layout_height="68dp"
+            android:src="@drawable/ic_maxima_resumo_vendas" />
+
+        <TextView
+            android:id="@+id/tx_resumo_venda"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="Resumo das vendas" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_ferramentas"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_bt_arredondado"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/ln_resumo_venda"
+        app:layout_constraintTop_toBottomOf="@+id/ln_pedidos"
+        tools:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/img_ferramentas"
+            android:layout_width="51dp"
+            android:layout_height="68dp"
+            android:src="@drawable/ic_maxima_ferramentas" />
+
+        <TextView
+            android:id="@+id/tx_ferramentas"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="Ferramentas" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ln_info"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tx_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center_vertical"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/img_on_off"
+            android:layout_width="42dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_maxima_nuvem_desconectado" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
