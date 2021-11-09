@@ -10,4 +10,6 @@
     <color name="background_color">#FFFFFF</color>
     <color name="light_blue">#186096</color>
     <color name="dark_blue">#00386C</color>
+    <color name="light_blue_splash_screen">#186096</color>
+    <color name="dark_blue_splash_screen">#053F6A</color>
 </resources>

@@ -1,6 +1,18 @@
 <resources>
 
-    <style name="Theme.Android" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.maxApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/light_blue</item>
+        <item name="colorPrimaryDark">@color/dark_blue</item>
+
+        <item name="colorSecondary">@color/light_blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:windowBackground">#F1F1F1</item>
+
+        <item name="android:statusBarColor">@color/dark_blue</item>
+    </style>
+
+    <style name="Theme.maxApp.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/light_blue</item>
         <item name="colorPrimaryDark">@color/dark_blue</item>
 
