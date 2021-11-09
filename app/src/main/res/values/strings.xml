@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Android</string>
+    <string name="app_name">maxApp</string>
+    <string name="clients_label">Clientes</string>
+    <string name="label_requests">Pedidos</string>
+    <string name="label_sales_summary">Resumo de vendas</string>
+    <string name="label_tools">Ferramentas</string>
 </resources>
