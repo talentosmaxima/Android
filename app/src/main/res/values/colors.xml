@@ -16,4 +16,6 @@
     <color name="item_active_bottom_nav"> #FFFFFF</color>
     <color name="item_inactive_bottom_nav">#95B6CF</color>
     <color name="green">#638735</color>
+    <color name="razao_social">#606060</color>
+    <color name="text_labels">#95989A</color>
 </resources>

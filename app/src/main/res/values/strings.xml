@@ -4,4 +4,21 @@
     <string name="label_requests">Pedidos</string>
     <string name="label_sales_summary">Resumo de vendas</string>
     <string name="label_tools">Ferramentas</string>
+    <string name="loading">Carregando..</string>
+    <string name="undefined">Indefinido</string>
+    <string name="error">Falha ao carregar</string>
+    <string name="label_email">E-mail:</string>
+    <string name="label_celular">Celular:</string>
+    <string name="label_data_nasc">Data Nasc.:</string>
+    <string name="label_conjuge">Cônjuge:</string>
+    <string name="label_data_nasc_conjuge">Data Nasc. Cônjuge:</string>
+    <string name="label_tipo">Tipo:</string>
+    <string name="label_time">Time:</string>
+    <string name="label_telefone">Telefone:</string>
+    <string name="label_dados_do_cliente">Dados do cliente</string>
+    <string name="label_cnpj">CNPJ:</string>
+    <string name="label_ramo_de_atividade">Ramo de atividade:</string>
+    <string name="label_enderecos">Endereços:</string>
+    <string name="label_contatos">Contatos</string>
+    <string name="label_botao_verificar">Verificar status do cliente</string>
 </resources>

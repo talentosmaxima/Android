@@ -24,7 +24,7 @@
         <item name="android:statusBarColor">@color/dark_blue</item>
     </style>
 
-    <style name="Button.Android" parent="Widget.MaterialComponents.Button.TextButton">
+    <style name="Button.maxApp" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="iconSize">55dp</item>
         <item name="iconGravity">textTop</item>
         <item name="backgroundTint">@color/white</item>
@@ -34,5 +34,9 @@
         <item name="android:elevation">5dp</item>
         <item name="android:layout_marginStart">5dp</item>
         <item name="android:layout_marginEnd">5dp</item>
+    </style>
+
+    <style name="TextName.maxApp" parent="Widget.AppCompat.TextView">
+
     </style>
 </resources>

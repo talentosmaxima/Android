@@ -38,7 +38,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_clients"
-        style="@style/Button.Android"
+        style="@style/Button.maxApp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/clients_label"
@@ -50,7 +50,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_requests"
-        style="@style/Button.Android"
+        style="@style/Button.maxApp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/label_requests"
@@ -63,7 +63,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_sales_summary"
-        style="@style/Button.Android"
+        style="@style/Button.maxApp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/label_sales_summary"
@@ -75,7 +75,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_tools"
-        style="@style/Button.Android"
+        style="@style/Button.maxApp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/label_tools"
