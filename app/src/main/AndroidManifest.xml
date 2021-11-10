@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.maxApp">
         <activity
-            android:name=".CustomSplashScreenActivity"
+            android:name=".ui.ClientInformationActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.MainActivity"/>
+        <activity
+            android:name=".ui.CustomSplashScreenActivity"
             android:exported="true"
             android:theme="@style/Theme.maxApp.NoActionBar">
             <intent-filter>
@@ -20,9 +24,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.maxApp"/>
+            android:theme="@style/Theme.maxApp" />
     </application>
-
 </manifest>

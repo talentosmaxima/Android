@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_constraintEnd_toEndOf="@id/_cv_dados_cliente"
+    app:layout_constraintStart_toStartOf="@id/_cv_dados_cliente"
+    app:layout_constraintTop_toBottomOf="@id/_cv_dados_cliente"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5"/>
+
+            <TextView
+                android:id="@+id/_contatos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contatos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/_contatos_divisor"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@id/_contatos" />
+
+            <TextView
+                android:id="@+id/nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/_contatos"
+                app:layout_constraintTop_toBottomOf="@id/_contatos"
+                tools:text="@sample/clientes.json/cliente/contatos/nome" />
+
+            <TextView
+                android:id="@+id/_telefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telefone:"
+                app:layout_constraintStart_toStartOf="@id/_contatos"
+                app:layout_constraintTop_toBottomOf="@id/nome" />
+
+            <TextView
+                android:id="@+id/telefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_telefone"
+                app:layout_constraintTop_toTopOf="@id/_telefone"
+                tools:text="@sample/clientes.json/cliente/contatos/telefone"/>
+
+            <TextView
+                android:id="@+id/_email"
+                app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+                app:layout_constraintTop_toTopOf="@id/_telefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail:"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_email"
+                app:layout_constraintTop_toTopOf="@id/_email"
+                tools:text="@sample/clientes.json/cliente/contatos/e_mail"/>
+
+            <TextView
+                android:id="@+id/_celular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Celular:"
+                app:layout_constraintStart_toStartOf="@id/_contatos"
+                app:layout_constraintTop_toBottomOf="@id/_telefone" />
+
+            <TextView
+                android:id="@+id/_data_nasc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/_email"
+                app:layout_constraintTop_toBottomOf="@id/_email"
+                android:text="Data Nasc.:"/>
+
+            <TextView
+                android:id="@+id/data_nasc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_data_nasc"
+                app:layout_constraintTop_toTopOf="@id/_data_nasc"
+                tools:text="@sample/clientes.json/cliente/contatos/data_nascimento"/>
+
+            <TextView
+                android:id="@+id/celular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/_celular"
+                app:layout_constraintStart_toEndOf="@id/_celular"
+                tools:text="@sample/clientes.json/cliente/contatos/celular"/>
+
+            <TextView
+                android:id="@+id/_conjuge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cônjuge:"
+                app:layout_constraintStart_toStartOf="@id/_contatos"
+                app:layout_constraintTop_toBottomOf="@id/_celular" />
+
+            <TextView
+                android:id="@+id/_data_nasc_conjuge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/_data_nasc"
+                app:layout_constraintTop_toBottomOf="@id/_data_nasc"
+                android:text="Data Nasc. Cônjuge:"/>
+
+            <TextView
+                android:id="@+id/data_nasc_conjuge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_data_nasc_conjuge"
+                app:layout_constraintTop_toTopOf="@id/_data_nasc_conjuge"
+                tools:text="Não informado"/>
+
+            <TextView
+                android:id="@+id/conjuge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_conjuge"
+                app:layout_constraintTop_toTopOf="@id/_conjuge"
+                tools:text="@sample/clientes.json/cliente/contatos/conjuge"/>
+
+            <TextView
+                android:id="@+id/_tipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo:"
+                app:layout_constraintStart_toStartOf="@id/_contatos"
+                app:layout_constraintTop_toBottomOf="@id/_conjuge" />
+
+            <TextView
+                android:id="@+id/tipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_tipo"
+                app:layout_constraintTop_toTopOf="@id/_tipo"
+                tools:text="@sample/clientes.json/cliente/contatos/tipo"/>
+
+            <TextView
+                android:id="@+id/_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time:"
+                app:layout_constraintStart_toStartOf="@id/_contatos"
+                app:layout_constraintTop_toBottomOf="@id/_tipo" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_time"
+                app:layout_constraintTop_toTopOf="@id/_time"
+                tools:text="@sample/clientes.json/cliente/contatos/time"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>

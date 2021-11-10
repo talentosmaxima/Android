@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/_cv_dados_cliente"
+        app:cardPreventCornerOverlap="false"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/_client_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dados do cliente"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/_client_information_divisor"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@id/_client_information" />
+
+            <TextView
+                android:id="@+id/client_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/_client_information"
+                app:layout_constraintTop_toBottomOf="@id/_client_information_divisor"
+                tools:text="@sample/clientes.json/cliente/codigo" />
+
+            <TextView
+                android:id="@+id/razao_social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/client_id"
+                app:layout_constraintTop_toBottomOf="@id/_client_information_divisor"
+                tools:text="@sample/clientes.json/cliente/razao_social" />
+
+            <TextView
+                android:id="@+id/nome_fantasia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/_client_information"
+                app:layout_constraintTop_toBottomOf="@id/client_id"
+                tools:text="@sample/clientes.json/cliente/nomeFantasia" />
+
+            <TextView
+                android:id="@+id/_cnpj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CNPJ:"
+                app:layout_constraintStart_toStartOf="@id/_client_information"
+                app:layout_constraintTop_toBottomOf="@id/nome_fantasia" />
+
+            <TextView
+                android:id="@+id/cnpj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_cnpj"
+                app:layout_constraintTop_toTopOf="@id/_cnpj"
+                tools:text="@sample/clientes.json/cliente/cnpj" />
+
+            <TextView
+                android:id="@+id/_ramo_atividade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ramo de atividade:"
+                app:layout_constraintStart_toStartOf="@id/_client_information"
+                app:layout_constraintTop_toBottomOf="@id/_cnpj" />
+
+            <TextView
+                android:id="@+id/ramo_atividade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_ramo_atividade"
+                app:layout_constraintTop_toTopOf="@id/_ramo_atividade"
+                tools:text="@sample/clientes.json/cliente/ramo_atividade" />
+
+            <TextView
+                android:id="@+id/_enderecos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endereços:"
+                app:layout_constraintStart_toStartOf="@id/_client_information"
+                app:layout_constraintTop_toBottomOf="@id/_ramo_atividade" />
+
+            <TextView
+                android:id="@+id/enderecos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_enderecos"
+                app:layout_constraintTop_toTopOf="@id/_enderecos"
+                tools:text="@sample/clientes.json/cliente/endereco" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cv_contatos_cliente"
+    app:layout_constraintTop_toBottomOf="@id/_cv_dados_cliente"
+    app:layout_constraintStart_toStartOf="@id/_cv_dados_cliente"
+    app:layout_constraintEnd_toEndOf="@id/_cv_dados_cliente"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contatos_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/_cv_dados_cliente"
+        app:layout_constraintStart_toStartOf="@id/_cv_dados_cliente"
+        app:layout_constraintTop_toBottomOf="@id/_cv_dados_cliente"
+        tools:itemCount="1"
+        tools:listitem="@layout/contatos_cliente_item" />
+
+</androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_verificar_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:layout_marginTop="6dp"
+        android:text="Verificar status do cliente"
+        android:layout_marginHorizontal="8dp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/cv_contatos_cliente"
+        app:layout_constraintStart_toStartOf="@id/cv_contatos_cliente"
+        app:layout_constraintTop_toBottomOf="@id/cv_contatos_cliente" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        android:background="@color/background_bottom_nav"
+        app:itemIconTint="@color/tab_bottom_nav"
+        app:itemTextColor="@color/tab_bottom_nav"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

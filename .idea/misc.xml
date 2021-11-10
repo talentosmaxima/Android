@@ -4,8 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.2037037037037037" />
+        <entry key="app/src/main/res/drawable/tab_bottom_navigation.xml" value="0.21574074074074073" />
+        <entry key="app/src/main/res/layout/activity_client_information.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_custom_splash_screen.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/contatos_cliente_item.xml" value="0.271875" />
+        <entry key="app/src/main/res/layout/contatos_item.xml" value="0.271875" />
+        <entry key="app/src/main/res/layout/dados_cliente_item.xml" value="0.271875" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.271875" />
       </map>
     </option>
   </component>

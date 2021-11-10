@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingHorizontal="3dp"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_center_horizontal"
@@ -37,6 +37,7 @@
 
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_clients"
         style="@style/Button.Android"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -48,6 +49,7 @@
         app:layout_constraintTop_toBottomOf="@id/gl_top_horizontal" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_requests"
         style="@style/Button.Android"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -60,6 +62,7 @@
 
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sales_summary"
         style="@style/Button.Android"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -71,6 +74,7 @@
         app:layout_constraintTop_toTopOf="@+id/gl_center_horizontal" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tools"
         style="@style/Button.Android"
         android:layout_width="0dp"
         android:layout_height="0dp"

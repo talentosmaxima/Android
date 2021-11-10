@@ -12,4 +12,8 @@
     <color name="dark_blue">#00386C</color>
     <color name="light_blue_splash_screen">#186096</color>
     <color name="dark_blue_splash_screen">#053F6A</color>
+    <color name="background_bottom_nav">#186096</color>
+    <color name="item_active_bottom_nav"> #FFFFFF</color>
+    <color name="item_inactive_bottom_nav">#95B6CF</color>
+    <color name="green">#638735</color>
 </resources>

@@ -1,4 +1,4 @@
-package br.com.maximatech
+package br.com.maximatech.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,11 +7,10 @@ import br.com.maximatech.databinding.ActivityCustomSplashScreenBinding
 
 class CustomSplashScreenActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCustomSplashScreenBinding
+    private val binding by lazy { ActivityCustomSplashScreenBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCustomSplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val intent = Intent(
@@ -19,7 +18,7 @@ class CustomSplashScreenActivity : AppCompatActivity() {
             MainActivity::class.java
         )
 
-        if(android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.R){
+        if (android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.R) {
             startActivity(intent)
         } else {
             binding.maximaTechIcon.alpha = 0f

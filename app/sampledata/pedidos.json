@@ -1,0 +1,110 @@
+{
+  "pedidos": [
+    {
+      "numero_ped_Rca": 542180,
+      "numero_ped_erp": "6421800987",
+      "codigoCliente": "848.246",
+      "NOMECLIENTE": "Burger",
+      "data": "2018-09-06T10:12:21-0300",
+      "status": "Processado",
+      "critica": "SUCESSO",
+      "tipo": "ORCAMENTO",
+      "legendas": [
+        "PEDIDO_SOFREU_CORTE",
+        "PEDIDO_FEITO_TELEMARKETING"
+      ]
+    },
+    {
+      "numero_ped_Rca": 542181,
+      "numero_ped_erp": "6421800988",
+      "codigoCliente": "8.246",
+      "NOMECLIENTE": "Dona Dona",
+      "data": "2018-09-06T16:12:21-0300",
+      "status": "Em processamento",
+      "tipo": "PEDIDO",
+      "legendas": []
+    },
+    {
+      "numero_ped_Rca": 542182,
+      "numero_ped_erp": "6421800989",
+      "codigoCliente": "1.236",
+      "NOMECLIENTE": "Supermercado do Zé",
+      "data": "2018-09-06T17:12:21-0300",
+      "status": "Processado",
+      "critica": "FALHA_PARCIAL",
+      "tipo": "PEDIDO",
+      "legendas": [
+        "PEDIDO_CANCELADO_ERP"
+      ]
+    },
+    {
+      "numero_ped_Rca": 542183,
+      "numero_ped_erp": "6421800990",
+      "codigoCliente": "1.115",
+      "NOMECLIENTE": "Armazém da Carne",
+      "data": "2018-09-06T08:22:11-0300",
+      "status": "Pendente",
+      "tipo": "PEDIDO"
+    },
+    {
+      "numero_ped_Rca": 542184,
+      "numero_ped_erp": "6421800991",
+      "codigoCliente": "2.4459",
+      "NOMECLIENTE": "Atacado Novo",
+      "data": "2018-09-06T08:21:11-0300",
+      "status": "Pendente",
+      "tipo": "PEDIDO"
+    },
+    {
+      "numero_ped_Rca": 542185,
+      "numero_ped_erp": "6421800992",
+      "codigoCliente": "965.123",
+      "NOMECLIENTE": "Burger",
+      "data": "2018-09-05T09:31:18-0300",
+      "status": "Processado",
+      "critica": "SUCESSO",
+      "tipo": "PEDIDO",
+      "legendas": [
+        "PEDIDO_SOFREU_CORTE",
+        "PEDIDO_FEITO_TELEMARKETING"
+      ]
+    },
+    {
+      "numero_ped_Rca": 542186,
+      "numero_ped_erp": "6421800993",
+      "codigoCliente": "2.4459",
+      "NOMECLIENTE": "Atacadão dos Preços baixos",
+      "data": "2018-09-04T15:23:59-0300",
+      "status": "Pendente",
+      "tipo": "ORCAMENTO"
+    },
+    {
+      "numero_ped_Rca": 542187,
+      "numero_ped_erp": "6421800994",
+      "codigoCliente": "3",
+      "NOMECLIENTE": "Padaria do Zé Borges",
+      "data": "2018-09-03T18:30:49-0300",
+      "status": "Pendente",
+      "tipo": "ORCAMENTO"
+    },
+    {
+      "numero_ped_Rca": 542188,
+      "numero_ped_erp": "6421800995",
+      "codigoCliente": "3",
+      "NOMECLIENTE": "Supermercado Braga",
+      "data": "2018-09-11T12:30:19-0300",
+      "status": "Em Processamento",
+      "tipo": "PEDIDO"
+    },
+    {
+      "numero_ped_Rca": 542189,
+      "numero_ped_erp": "6421800996",
+      "codigoCliente": "965",
+      "NOMECLIENTE": "Supermecado Giro Mais",
+      "data": "2018-09-12T08:33:18-0300",
+      "status": "Processado",
+      "critica": "SUCESSO",
+      "tipo": "PEDIDO"
+    }
+  ]
+}
