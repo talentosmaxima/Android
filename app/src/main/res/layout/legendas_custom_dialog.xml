@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/title_legenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/santral_bold"
+        android:text="@string/label_legendas"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle_status_do_pedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:text="@string/label_status_do_pedido_no_erp"
+        style="@style/TextLabelBlack.maxApp"
+        app:layout_constraintStart_toStartOf="@id/title_legenda"
+        app:layout_constraintTop_toBottomOf="@id/title_legenda" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/_cv_status_em_processamento"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="@id/subtitle_status_do_pedido"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_status_do_pedido">
+
+        <ImageView
+            android:id="@+id/status_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#95989A"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_maxima_em_processamento" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/status_em_processamento_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        style="@style/TextLabelBlack.maxApp"
+        android:text="@string/label_em_proceessamento_por_parte_do_fv"
+        app:layout_constraintBottom_toBottomOf="@+id/_cv_status_em_processamento"
+        app:layout_constraintStart_toEndOf="@+id/_cv_status_em_processamento"
+        app:layout_constraintTop_toTopOf="@+id/_cv_status_em_processamento" />
+
+    <TextView
+        android:id="@+id/subtitle_critica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:text="@string/label_critica"
+        style="@style/TextLabelBlack.maxApp"
+        app:layout_constraintStart_toStartOf="@+id/_cv_status_em_processamento"
+        app:layout_constraintTop_toBottomOf="@+id/_cv_status_em_processamento" />
+
+    <ImageView
+        android:id="@+id/critica_aguardando_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_maxima_aguardando_critica"
+        app:layout_constraintStart_toStartOf="@id/subtitle_critica"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_critica" />
+
+    <TextView
+        android:id="@+id/critica_aguardando"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextLabelBlack.maxApp"
+        android:layout_marginStart="12dp"
+        android:text="@string/label_aguardando_retorno_erp"
+        app:layout_constraintBottom_toBottomOf="@id/critica_aguardando_image"
+        app:layout_constraintStart_toEndOf="@id/critica_aguardando_image"
+        app:layout_constraintTop_toTopOf="@id/critica_aguardando_image" />
+
+    <ImageView
+        android:id="@+id/critica_sucesso_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_maxima_critica_sucesso"
+        app:layout_constraintStart_toStartOf="@id/critica_aguardando_image"
+        app:layout_constraintTop_toBottomOf="@id/critica_aguardando_image" />
+
+    <TextView
+        android:id="@+id/critica_sucesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/label_success"
+        style="@style/TextLabelBlack.maxApp"
+        app:layout_constraintBottom_toBottomOf="@id/critica_sucesso_image"
+        app:layout_constraintStart_toEndOf="@id/critica_sucesso_image"
+        app:layout_constraintTop_toTopOf="@id/critica_sucesso_image" />
+
+    <ImageView
+        android:id="@+id/critica_falha_parcial_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_maxima_critica_alerta"
+        app:layout_constraintStart_toStartOf="@id/critica_sucesso_image"
+        app:layout_constraintTop_toBottomOf="@id/critica_sucesso_image" />
+
+    <TextView
+        android:id="@+id/critica_falha_parcial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/label_falha_parcial"
+        style="@style/TextLabelBlack.maxApp"
+        app:layout_constraintBottom_toBottomOf="@id/critica_falha_parcial_image"
+        app:layout_constraintStart_toEndOf="@id/critica_falha_parcial_image"
+        app:layout_constraintTop_toTopOf="@id/critica_falha_parcial_image" />
+
+    <TextView
+        android:id="@+id/subtitle_legendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextLabelBlack.maxApp"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:text="@string/label_legendas"
+        app:layout_constraintStart_toStartOf="@id/critica_falha_parcial_image"
+        app:layout_constraintTop_toBottomOf="@id/critica_falha_parcial_image" />
+
+    <ImageView
+        android:id="@+id/legenda_corte_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_maxima_legenda_corte"
+        app:layout_constraintStart_toStartOf="@id/subtitle_legendas"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_legendas" />
+
+    <TextView
+        android:id="@+id/legenda_corte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextLabelBlack.maxApp"
+        android:layout_marginStart="12dp"
+        android:text="@string/label_pedido_sofreu_corte"
+        app:layout_constraintBottom_toBottomOf="@id/legenda_corte_image"
+        app:layout_constraintStart_toEndOf="@id/legenda_corte_image"
+        app:layout_constraintTop_toTopOf="@id/legenda_corte_image" />
+
+    <ImageView
+        android:id="@+id/legenda_falta_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_maxima_legenda_falta"
+        app:layout_constraintStart_toStartOf="@id/legenda_corte_image"
+        app:layout_constraintTop_toBottomOf="@id/legenda_corte_image" />
+
+    <TextView
+        android:id="@+id/legenda_falta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/label_pedido_com_falta"
+        style="@style/TextLabelBlack.maxApp"
+        app:layout_constraintBottom_toBottomOf="@id/legenda_falta_image"
+        app:layout_constraintStart_toEndOf="@id/legenda_falta_image"
+        app:layout_constraintTop_toTopOf="@id/legenda_falta_image" />
+
+    <ImageView
+        android:id="@+id/legenda_cancelado_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_maxima_legenda_cancelamento"
+        app:layout_constraintStart_toStartOf="@id/legenda_falta_image"
+        app:layout_constraintTop_toBottomOf="@id/legenda_falta_image" />
+
+    <TextView
+        android:id="@+id/legenda_cancelado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        style="@style/TextLabelBlack.maxApp"
+        android:text="@string/label_pedido_cancelado_no_erp"
+        app:layout_constraintBottom_toBottomOf="@id/legenda_cancelado_image"
+        app:layout_constraintStart_toEndOf="@id/legenda_cancelado_image"
+        app:layout_constraintTop_toTopOf="@id/legenda_cancelado_image" />
+
+    <ImageView
+        android:id="@+id/legenda_devolucao_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_maxima_legenda_devolucao"
+        app:layout_constraintStart_toStartOf="@id/legenda_cancelado_image"
+        app:layout_constraintTop_toBottomOf="@id/legenda_cancelado_image" />
+
+    <TextView
+        android:id="@+id/legenda_devolucao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        style="@style/TextLabelBlack.maxApp"
+        android:text="@string/label_pedido_com_devolucao"
+        app:layout_constraintBottom_toBottomOf="@id/legenda_devolucao_image"
+        app:layout_constraintStart_toEndOf="@id/legenda_devolucao_image"
+        app:layout_constraintTop_toTopOf="@id/legenda_devolucao_image" />
+
+    <ImageView
+        android:id="@+id/legenda_telemarketing_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_maxima_legenda_telemarketing"
+        app:layout_constraintStart_toStartOf="@id/legenda_devolucao_image"
+        app:layout_constraintTop_toBottomOf="@id/legenda_devolucao_image" />
+
+    <TextView
+        android:id="@+id/legenda_telemarketing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/label_pedido_feito_telemarketing"
+        style="@style/TextLabelBlack.maxApp"
+        app:layout_constraintBottom_toBottomOf="@id/legenda_telemarketing_image"
+        app:layout_constraintStart_toEndOf="@id/legenda_telemarketing_image"
+        app:layout_constraintTop_toTopOf="@id/legenda_telemarketing_image" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_fechar"
+        style="@style/Widget.AppCompat.Light.ActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_fechar"
+        android:fontFamily="@font/santral_medium"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/legenda_telemarketing" />
+</androidx.constraintlayout.widget.ConstraintLayout>

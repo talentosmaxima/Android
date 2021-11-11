@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_historico_pedidos_screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/_cv_dados_cliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="5dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/_client_information"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/santral_bold"
+                            android:text="@string/label_dados_do_cliente"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/_client_information_divisor"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray"
+                            app:layout_constraintTop_toBottomOf="@id/_client_information" />
+
+                        <TextView
+                            android:id="@+id/codigo_e_razao_social"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/santral_bold"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="@id/_client_information"
+                            app:layout_constraintTop_toBottomOf="@id/_client_information_divisor" />
+
+                        <TextView
+                            android:id="@+id/nome_fantasia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/santral_bold"
+                            android:textAllCaps="true"
+                            android:textColor="@color/razao_social"
+                            app:layout_constraintStart_toStartOf="@id/_client_information"
+                            app:layout_constraintTop_toBottomOf="@id/codigo_e_razao_social" />
+
+                        <TextView
+                            android:id="@+id/_cnpj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/santral_medium"
+                            android:text="@string/label_cnpj"
+                            android:textColor="@color/text_label_gray"
+                            app:layout_constraintStart_toStartOf="@id/_client_information"
+                            app:layout_constraintTop_toBottomOf="@id/nome_fantasia" />
+
+                        <TextView
+                            android:id="@+id/cnpj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/santral_medium"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toEndOf="@id/_cnpj"
+                            app:layout_constraintTop_toTopOf="@id/_cnpj" />
+
+                        <TextView
+                            android:id="@+id/_ramo_atividade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/santral_book"
+                            android:text="@string/label_ramo_de_atividade"
+                            android:textColor="@color/text_label_gray"
+                            app:layout_constraintStart_toStartOf="@id/_client_information"
+                            app:layout_constraintTop_toBottomOf="@id/_cnpj" />
+
+                        <TextView
+                            android:id="@+id/ramo_atividade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/santral_medium"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toEndOf="@id/_ramo_atividade"
+                            app:layout_constraintTop_toTopOf="@id/_ramo_atividade" />
+
+                        <TextView
+                            android:id="@+id/_enderecos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/santral_book"
+                            android:text="@string/label_enderecos"
+                            android:textColor="@color/text_label_gray"
+                            app:layout_constraintStart_toStartOf="@id/_client_information"
+                            app:layout_constraintTop_toBottomOf="@id/_ramo_atividade" />
+
+                        <TextView
+                            android:id="@+id/enderecos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/santral_medium"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toEndOf="@id/_enderecos"
+                            app:layout_constraintTop_toTopOf="@id/_enderecos" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_contatos_cliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="5dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="@id/_cv_dados_cliente"
+                    app:layout_constraintStart_toStartOf="@id/_cv_dados_cliente"
+                    app:layout_constraintTop_toBottomOf="@id/_cv_dados_cliente">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/_contatos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/santral_bold"
+                            android:text="@string/label_contatos"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/_contatos_divisor"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray"
+                            app:layout_constraintTop_toBottomOf="@id/_contatos" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_contatos_cliente"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/_contatos"
+                            app:layout_constraintTop_toBottomOf="@id/_contatos_divisor"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/item_contatos_cliente" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <Button
+                    android:id="@+id/btn_verificar_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="6dp"
+                    android:backgroundTint="@color/green"
+                    android:text="@string/label_botao_verificar"
+                    android:textAllCaps="false"
+                    app:layout_constraintEnd_toEndOf="@id/cv_contatos_cliente"
+                    app:layout_constraintStart_toStartOf="@id/cv_contatos_cliente"
+                    app:layout_constraintTop_toBottomOf="@id/cv_contatos_cliente" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_tentar_novamente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:backgroundTint="@color/green"
+                android:text="Tentar novamente"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true" />
+</FrameLayout>
