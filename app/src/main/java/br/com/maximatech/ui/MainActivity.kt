@@ -2,6 +2,7 @@ package br.com.maximatech.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import br.com.maximatech.BuildConfig
 import br.com.maximatech.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,5 +20,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnPedidos.setOnClickListener {
             NavigationActivity.launchHistoricoPedidosFragment(this)
         }
+    }
+
+    fun asihud(){
+        BuildConfig.VERSION_NAME
     }
 }

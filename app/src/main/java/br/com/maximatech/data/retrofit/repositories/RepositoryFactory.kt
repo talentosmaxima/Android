@@ -1,14 +1,13 @@
 package br.com.maximatech.data.retrofit.repositories
 
 import br.com.maximatech.data.retrofit.services.ApiServices
-import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RepositoryFactory {
 
     companion object {
-        fun getApiRepository() = Retrofit.Builder()
+        fun getApiRepository() : ApiServices = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

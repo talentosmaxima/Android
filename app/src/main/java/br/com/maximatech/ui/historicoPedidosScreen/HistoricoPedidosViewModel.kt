@@ -1,12 +1,11 @@
 package br.com.maximatech.ui.historicoPedidosScreen
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.maximatech.data.model.Pedido
-import br.com.maximatech.ui.State
 import br.com.maximatech.data.retrofit.repositories.RepositoryFactory
+import br.com.maximatech.ui.State
 import kotlinx.coroutines.launch
 
 class HistoricoPedidosViewModel: ViewModel() {

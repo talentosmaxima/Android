@@ -13,7 +13,7 @@ import br.com.maximatech.data.model.Pedido
 import br.com.maximatech.ui.State
 import br.com.maximatech.databinding.FragmentHistoricoPedidosBinding
 import br.com.maximatech.databinding.LegendasCustomDialogBinding
-import br.com.maximatech.ui.StateAction
+import br.com.maximatech.ui.ViewManagerState
 
 class HistoricoPedidosFragment : Fragment() {
 
@@ -24,7 +24,7 @@ class HistoricoPedidosFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHistoricoPedidosBinding.inflate(inflater, container, false)
         adapter = HistoricoPedidosAdapter()
         setHasOptionsMenu(true)
@@ -37,7 +37,7 @@ class HistoricoPedidosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         activity?.title = getString(R.string.label_hist_de_pedidos)
-        val stateAction = StateAction(
+        val stateAction = ViewManagerState(
             binding.rvPedidos, binding.btnTentarNovamente, binding.loading
         )
 

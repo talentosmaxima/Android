@@ -27,7 +27,7 @@
     <string name="label_codigo_razao_social">%1$s - %2$s</string>
     <string name="label_data_status">%1$s - Status %2$s</string>
     <string name="label_empty_state2">Não há alvarás para exibir, verifique com o responsável pelo ERP</string>
-    <string name="label_empty_state1">Nada encontrado...</string>
+    <string name="label_empty_state1">Nada encontrado…</string>
     <string name="label_hist_de_pedidos">Hist. de pedidos</string>
     <string name="label_alvaras">Alvarás</string>
     <string name="hist_pedidos_error_loading">Falha ao carregar o histórico de pedidos</string>

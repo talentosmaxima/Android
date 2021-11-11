@@ -4,7 +4,7 @@ import android.view.View
 
 enum class State { LOADING, ERROR, SUCCESS }
 
-class StateAction(
+class ViewManagerState(
     private val mainView: View,
     private val btnTentarNovamente: View,
     private val loadingView: View

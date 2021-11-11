@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import br.com.maximatech.R
-import br.com.maximatech.core.extensions.formatDate
+import br.com.maximatech.core.helpers.DateHelper
 import br.com.maximatech.data.model.Pedido
 import br.com.maximatech.databinding.ItemHistoricoPedidosBinding
 
@@ -34,7 +34,7 @@ class HistoricoPedidosAdapter :
                 R.string.label_codigo_cliente, item.codigoCliente, item.nomecliente
             )
             binding.status.text = item.status
-            binding.data.text = item.data.formatDate()
+            binding.data.text = DateHelper.formatDate(item.data)
         }
     }
 }
