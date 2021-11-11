@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.maxApp">
         <activity
-            android:name=".ui.clientInformationScreen.ClientInformationActivity"
+            android:name=".ui.NavigationActivity"
             android:exported="true"
             android:parentActivityName=".ui.MainActivity"/>
         <activity
-            android:name=".ui.CustomSplashScreenActivity"
+            android:name=".ui.customSplashScreen.CustomSplashScreenActivity"
             android:exported="true"
             android:theme="@style/Theme.maxApp.NoActionBar">
             <intent-filter>

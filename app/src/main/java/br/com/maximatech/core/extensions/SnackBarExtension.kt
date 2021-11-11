@@ -1,15 +1,15 @@
 package br.com.maximatech.core.extensions
 
 import android.view.View
+import br.com.maximatech.R
 import com.google.android.material.snackbar.Snackbar
 
 fun View.showSnackbar(
     message: String,
     length: Int = Snackbar.LENGTH_LONG,
-    anchorView: View
 ) {
     val snackBar = Snackbar.make(this, message, length)
-    snackBar.anchorView = anchorView
+    snackBar.setAnchorView(R.id.bottom_nav_view)
     snackBar.setAction("fechar") {
         snackBar.dismiss()
     }

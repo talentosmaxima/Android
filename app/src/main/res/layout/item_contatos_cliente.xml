@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
         android:text="@string/label_telefone"
-        android:textColor="@color/text_labels"
+        android:textColor="@color/text_label_gray"
         app:layout_constraintStart_toStartOf="@id/nome"
         app:layout_constraintTop_toBottomOf="@id/nome" />
 
@@ -38,7 +38,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
-        android:text="@string/loading"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/_telefone"
         app:layout_constraintTop_toTopOf="@id/_telefone" />
@@ -58,7 +57,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
         android:text="@string/label_email"
-        android:textColor="@color/text_labels"
+        android:textColor="@color/text_label_gray"
         app:layout_constraintStart_toEndOf="@id/vertical_guideline"
         app:layout_constraintTop_toTopOf="@id/_telefone" />
 
@@ -67,12 +66,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
-        android:text="@string/loading"
         android:textColor="@color/black"
-
+        android:autoSizeMinTextSize="11sp"
+        android:autoSizeMaxTextSize="14sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:maxLines="2"
         app:layout_constraintEnd_toStartOf="@id/_ic_email"
         app:layout_constraintStart_toStartOf="@id/_email"
-        app:layout_constraintTop_toBottomOf="@id/_email" />
+        app:layout_constraintTop_toBottomOf="@id/_email"/>
 
     <ImageView
         android:id="@+id/_ic_email"
@@ -80,9 +82,9 @@
         android:layout_height="18dp"
         android:layout_marginStart="3dp"
         android:src="@drawable/ic_maxima_email"
+        app:layout_constraintBottom_toBottomOf="@id/email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/email"
-        app:layout_constraintBottom_toBottomOf="@id/email"/>
+        app:layout_constraintTop_toTopOf="@id/email" />
 
     <TextView
         android:id="@+id/_celular"
@@ -90,7 +92,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
         android:text="@string/label_celular"
-        android:textColor="@color/text_labels"
+        android:textColor="@color/text_label_gray"
         app:layout_constraintStart_toStartOf="@id/nome"
         app:layout_constraintTop_toBottomOf="@id/_telefone" />
 
@@ -99,7 +101,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
-        android:text="@string/loading"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/_celular"
         app:layout_constraintTop_toTopOf="@id/_celular" />
@@ -119,7 +120,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
         android:text="@string/label_data_nasc"
-        android:textColor="@color/text_labels"
+        android:textColor="@color/text_label_gray"
         app:layout_constraintStart_toStartOf="@id/_email"
         app:layout_constraintTop_toBottomOf="@id/email" />
 
@@ -128,7 +129,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
-        android:text="@string/loading"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/_data_nasc"
         app:layout_constraintTop_toTopOf="@id/_data_nasc" />
@@ -139,7 +139,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
         android:text="@string/label_conjuge"
-        android:textColor="@color/text_labels"
+        android:textColor="@color/text_label_gray"
         app:layout_constraintStart_toStartOf="@id/nome"
         app:layout_constraintTop_toBottomOf="@id/_celular" />
 
@@ -148,7 +148,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
-        android:text="@string/loading"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/_conjuge"
         app:layout_constraintTop_toTopOf="@id/_conjuge" />
@@ -159,20 +158,20 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
         android:text="@string/label_data_nasc_conjuge"
-        android:textColor="@color/text_labels"
+        android:textColor="@color/text_label_gray"
         app:layout_constraintStart_toStartOf="@id/_data_nasc"
         app:layout_constraintTop_toBottomOf="@id/_data_nasc" />
 
     <TextView
         android:id="@+id/data_nasc_conjuge"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:fontFamily="@font/santral_medium"
-        android:text="@string/loading"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/_data_nasc_conjuge"
-        app:layout_constraintTop_toTopOf="@id/_data_nasc_conjuge" />
+        app:layout_constraintStart_toStartOf="@id/_data_nasc_conjuge"
+        app:layout_constraintTop_toBottomOf="@id/_data_nasc_conjuge" />
 
     <TextView
         android:id="@+id/_tipo"
@@ -180,7 +179,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
         android:text="@string/label_tipo"
-        android:textColor="@color/text_labels"
+        android:textColor="@color/text_label_gray"
         app:layout_constraintStart_toStartOf="@id/nome"
         app:layout_constraintTop_toBottomOf="@id/_conjuge" />
 
@@ -189,7 +188,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
-        android:text="@string/loading"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/_tipo"
         app:layout_constraintTop_toTopOf="@id/_tipo" />
@@ -200,7 +198,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
         android:text="@string/label_time"
-        android:textColor="@color/text_labels"
+        android:textColor="@color/text_label_gray"
         app:layout_constraintStart_toStartOf="@id/nome"
         app:layout_constraintTop_toBottomOf="@id/_tipo" />
 
@@ -209,7 +207,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/santral_medium"
-        android:text="@string/loading"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/_time"
         app:layout_constraintTop_toTopOf="@id/_time" />

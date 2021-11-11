@@ -1,9 +1,10 @@
-package br.com.maximatech.ui
+package br.com.maximatech.ui.customSplashScreen
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.maximatech.databinding.ActivityCustomSplashScreenBinding
+import br.com.maximatech.ui.MainActivity
 
 class CustomSplashScreenActivity : AppCompatActivity() {
 

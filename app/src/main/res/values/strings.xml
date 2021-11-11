@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">maxApp</string>
-    <string name="clients_label">Clientes</string>
-    <string name="label_requests">Pedidos</string>
-    <string name="label_sales_summary">Resumo de vendas</string>
-    <string name="label_tools">Ferramentas</string>
+    <string name="label_clientes">Clientes</string>
+    <string name="label_pedidos">Pedidos</string>
+    <string name="label_resumo_de_vendas">Resumo de vendas</string>
+    <string name="label_ferramentas">Ferramentas</string>
     <string name="loading">Carregando..</string>
     <string name="undefined">Indefinido</string>
     <string name="error">Falha ao carregar</string>
+    <string name="dados_cliente_error_loading">Falha ao carregar os dados do cliente</string>
     <string name="label_email">E-mail:</string>
     <string name="label_celular">Celular:</string>
     <string name="label_data_nasc">Data Nasc.:</string>
@@ -21,4 +22,26 @@
     <string name="label_enderecos">Endereços:</string>
     <string name="label_contatos">Contatos</string>
     <string name="label_botao_verificar">Verificar status do cliente</string>
+    <string name="label_numero_rca_erp">%1$s - %2$s</string>
+    <string name="label_codigo_cliente">%1$s - %2$s</string>
+    <string name="label_codigo_razao_social">%1$s - %2$s</string>
+    <string name="label_data_status">%1$s - Status %2$s</string>
+    <string name="label_empty_state2">Não há alvarás para exibir, verifique com o responsável pelo ERP</string>
+    <string name="label_empty_state1">Nada encontrado...</string>
+    <string name="label_hist_de_pedidos">Hist. de pedidos</string>
+    <string name="label_alvaras">Alvarás</string>
+    <string name="hist_pedidos_error_loading">Falha ao carregar o histórico de pedidos</string>
+    <string name="label_legendas">Legendas</string>
+    <string name="label_critica">Críticas</string>
+    <string name="label_aguardando_retorno_erp">Aguardando retorno do ERP</string>
+    <string name="label_success">Sucesso</string>
+    <string name="label_falha_parcial">Falha parcial</string>
+    <string name="label_pedido_sofreu_corte">Pedido sofreu corte</string>
+    <string name="label_pedido_com_falta">Pedido com falta</string>
+    <string name="label_pedido_cancelado_no_erp">Pedido cancelado no ERP</string>
+    <string name="label_pedido_com_devolucao">Pedido com devolução</string>
+    <string name="label_pedido_feito_telemarketing">Pedido feito pelo Telemarketing</string>
+    <string name="label_fechar">FECHAR</string>
+    <string name="label_status_do_pedido_no_erp">Status do pedido no ERP</string>
+    <string name="label_em_proceessamento_por_parte_do_fv">Em proceessamento por parte do FV</string>
 </resources>

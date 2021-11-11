@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/page_dados_cliente"
-        android:enabled="true"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_maxima_pessoa_inativo"
-        android:title="Dados"/>
+        android:id="@+id/bottom_nav_icon_dados_cliente"
+        android:icon="@drawable/ic_maxima_pessoa"
+        android:title="Dados" />
     <item
-        android:id="@+id/page_historico_pedidos"
-        android:enabled="true"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_maxima_historico_pedidos_inativo"
-        android:title="Hist. Pedidos"/>
+        android:id="@+id/bottom_nav_icon_historico_pedidos"
+        android:icon="@drawable/ic_maxima_historico_pedidos"
+        android:title="Hist. Pedidos" />
 
     <item
-        android:id="@+id/page_alvaras"
-        android:enabled="true"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_maxima_alvara_inativo"
-        android:title="Alvarás"/>
+        android:id="@+id/bottom_nav_icon_alvaras"
+        android:icon="@drawable/ic_maxima_alvaras"
+        android:title="Alvarás" />
 </menu>

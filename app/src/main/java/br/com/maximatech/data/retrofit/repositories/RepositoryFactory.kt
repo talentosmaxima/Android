@@ -11,7 +11,6 @@ class RepositoryFactory {
         fun getApiRepository() = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .client(OkHttpClient())
             .build()
             .create(ApiServices::class.java)
 

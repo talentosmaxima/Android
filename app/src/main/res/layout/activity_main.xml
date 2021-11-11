@@ -37,11 +37,11 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_clients"
+        android:id="@+id/btn_clientes"
         style="@style/Button.maxApp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/clients_label"
+        android:text="@string/label_clientes"
         app:icon="@drawable/ic_maxima_pessoas"
         app:layout_constraintBottom_toTopOf="@id/gl_center_horizontal"
         app:layout_constraintEnd_toStartOf="@id/gl_center_vertical"
@@ -49,11 +49,11 @@
         app:layout_constraintTop_toBottomOf="@id/gl_top_horizontal" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_requests"
+        android:id="@+id/btn_pedidos"
         style="@style/Button.maxApp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/label_requests"
+        android:text="@string/label_pedidos"
         app:icon="@drawable/ic_maxima_pedido"
         app:layout_constraintBottom_toTopOf="@id/gl_center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,11 +62,11 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_sales_summary"
+        android:id="@+id/btn_resumos_de_vendas"
         style="@style/Button.maxApp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/label_sales_summary"
+        android:text="@string/label_resumo_de_vendas"
         app:icon="@drawable/ic_maxima_resumo_vendas"
         app:layout_constraintBottom_toTopOf="@+id/gl_bottom_horizontal"
         app:layout_constraintEnd_toStartOf="@+id/gl_center_vertical"
@@ -74,11 +74,11 @@
         app:layout_constraintTop_toTopOf="@+id/gl_center_horizontal" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_tools"
+        android:id="@+id/btn_ferramentas"
         style="@style/Button.maxApp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/label_tools"
+        android:text="@string/label_ferramentas"
         app:icon="@drawable/ic_maxima_ferramentas"
         app:layout_constraintBottom_toTopOf="@+id/gl_bottom_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
