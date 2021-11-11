@@ -13,8 +13,8 @@ class HistoricoPedidosViewModel: ViewModel() {
     val pedidosList = MutableLiveData<List<Pedido>>()
     val apiRequestState = MutableLiveData<State>()
 
-    fun getData() {
-        apiRequestState.postValue(State.LOADING)
+    fun fetchData() {
+        apiRequestState.value = State.LOADING
         viewModelScope.launch {
             try {
                 val retrofitInstance =

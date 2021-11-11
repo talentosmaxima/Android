@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.maximatech.R
 import br.com.maximatech.core.extensions.showSnackbar
-import br.com.maximatech.data.model.Pedido
 import br.com.maximatech.ui.State
 import br.com.maximatech.databinding.FragmentHistoricoPedidosBinding
 import br.com.maximatech.databinding.LegendasCustomDialogBinding
@@ -37,34 +36,32 @@ class HistoricoPedidosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         activity?.title = getString(R.string.label_hist_de_pedidos)
-        val stateAction = ViewManagerState(
+        val viewManager = ViewManagerState(
             binding.rvPedidos, binding.btnTentarNovamente, binding.loading
         )
 
-        var pedidosList: List<Pedido>?
-        viewModel.getData()
+        viewModel.fetchData()
 
         binding.rvPedidos.layoutManager = LinearLayoutManager(context)
         binding.rvPedidos.adapter = adapter
 
         binding.btnTentarNovamente.setOnClickListener {
-            stateAction.loading()
-            viewModel.getData()
+            viewManager.loading()
+            viewModel.fetchData()
         }
 
         viewModel.apiRequestState.observe(viewLifecycleOwner)
         { state ->
             when (state) {
                 State.SUCCESS -> {
-                    pedidosList = viewModel.pedidosList.value
-                    adapter.submitList(pedidosList)
-                    stateAction.success()
+                    adapter.submitList(viewModel.pedidosList.value)
+                    viewManager.success()
                 }
                 State.LOADING -> {
-                    stateAction.loading()
+                    viewManager.loading()
                 }
                 State.ERROR -> {
-                    stateAction.error()
+                    viewManager.error()
                     view.showSnackbar(
                         message = getString(R.string.hist_pedidos_error_loading),
                     )
