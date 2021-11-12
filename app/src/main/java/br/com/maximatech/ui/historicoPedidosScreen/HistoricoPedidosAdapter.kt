@@ -3,6 +3,8 @@ package br.com.maximatech.ui.historicoPedidosScreen
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -11,9 +13,17 @@ import br.com.maximatech.R
 import br.com.maximatech.core.helpers.DateHelper
 import br.com.maximatech.data.model.Pedido
 import br.com.maximatech.databinding.ItemHistoricoPedidosBinding
+import java.util.*
 
 class HistoricoPedidosAdapter :
-    ListAdapter<Pedido, HistoricoPedidosAdapter.ViewHolder>(DiffCallback()) {
+    ListAdapter<Pedido, HistoricoPedidosAdapter.ViewHolder>(DiffCallback()), Filterable {
+
+    private var list = mutableListOf<Pedido>()
+
+    fun updateList(list: MutableList<Pedido>?) {
+        this.list = list!!
+        submitList(list)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -91,6 +101,34 @@ class HistoricoPedidosAdapter :
                     }
                 }
             }
+        }
+    }
+
+    override fun getFilter(): Filter {
+        return customFilter
+    }
+
+    private val customFilter = object : Filter() {
+        override fun performFiltering(constraint: CharSequence?): FilterResults {
+            val filteredList = mutableListOf<Pedido>()
+            if (constraint == null || constraint.isEmpty()) {
+                filteredList.addAll(list)
+            } else {
+                list.forEach {
+                    if (it.nomecliente.lowercase(Locale.getDefault())
+                            .contains(constraint.toString().lowercase(Locale.getDefault()))
+                    ) {
+                        filteredList.add(it)
+                    }
+                }
+            }
+            val results = FilterResults()
+            results.values = filteredList
+            return results
+        }
+
+        override fun publishResults(constraint: CharSequence?, filterResults: FilterResults?) {
+            submitList(filterResults?.values as MutableList<Pedido>)
         }
     }
 }

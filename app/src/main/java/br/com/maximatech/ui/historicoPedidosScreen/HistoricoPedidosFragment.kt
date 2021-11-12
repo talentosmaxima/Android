@@ -4,14 +4,16 @@ import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.maximatech.R
 import br.com.maximatech.core.extensions.showSnackbarWithAnchorView
-import br.com.maximatech.ui.State
+import br.com.maximatech.data.model.Pedido
 import br.com.maximatech.databinding.FragmentHistoricoPedidosBinding
 import br.com.maximatech.databinding.LegendasCustomDialogBinding
+import br.com.maximatech.ui.State
 import br.com.maximatech.ui.ViewManagerState
 
 class HistoricoPedidosFragment : Fragment() {
@@ -50,11 +52,14 @@ class HistoricoPedidosFragment : Fragment() {
             viewModel.fetchData()
         }
 
+        viewModel.pedidosList.observe(viewLifecycleOwner) {
+            adapter.updateList(it as MutableList<Pedido>?)
+        }
+
         viewModel.apiRequestState.observe(viewLifecycleOwner)
         { state ->
             when (state) {
                 State.SUCCESS -> {
-                    adapter.submitList(viewModel.pedidosList.value)
                     viewManager.success()
                 }
                 State.LOADING -> {
@@ -72,8 +77,23 @@ class HistoricoPedidosFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.hist_pedidos_menu, menu)
+
+        val search = menu.findItem(R.id.pesquisar_menu_action)
+        val searchView = search?.actionView as SearchView
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                adapter.filter.filter(query)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                adapter.filter.filter(newText)
+                return false
+            }
+        })
         super.onCreateOptionsMenu(menu, inflater)
     }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.legenda_menu_action) {
@@ -83,7 +103,7 @@ class HistoricoPedidosFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun showLegendasDialog(context: Context){
+    private fun showLegendasDialog(context: Context) {
         val binding = LegendasCustomDialogBinding.inflate(layoutInflater)
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
