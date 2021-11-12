@@ -71,7 +71,7 @@ class HistoricoPedidosFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.legenda_menu, menu)
+        inflater.inflate(R.menu.hist_pedidos_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
 

@@ -48,4 +48,5 @@
     <string name="label_funcionalidade_ainda_nao_disponivel">Funcionalidade ainda não disponível! Em breve!</string>
     <string name="label_numero_ped_rca_erp">N°Ped. RCA/ERP:</string>
     <string name="label_cliente">Cliente:</string>
+    <string name="label_pesquisar">Pesquisar</string>
 </resources>
