@@ -69,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/label_critica"
+            android:text="@string/label_criticas"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/_cv_status_em_processamento"
             app:layout_constraintTop_toBottomOf="@+id/_cv_status_em_processamento" />

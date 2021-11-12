@@ -32,7 +32,8 @@
     <string name="label_alvaras">Alvarás</string>
     <string name="hist_pedidos_error_loading">Falha ao carregar o histórico de pedidos</string>
     <string name="label_legendas">Legendas</string>
-    <string name="label_critica">Críticas</string>
+    <string name="label_criticas">Críticas</string>
+    <string name="label_critica">Crítica:</string>
     <string name="label_aguardando_retorno_erp">Aguardando retorno do ERP</string>
     <string name="label_success">Sucesso</string>
     <string name="label_falha_parcial">Falha parcial</string>
@@ -46,4 +47,6 @@
     <string name="label_em_proceessamento_por_parte_do_fv">Em proceessamento por parte do FV</string>
     <string name="label_app_version">v.%1$s</string>
     <string name="label_funcionalidade_ainda_nao_disponivel">Funcionalidade ainda não disponível! Em breve!</string>
+    <string name="label_numero_ped_rca_erp">N°Ped. RCA/ERP:</string>
+    <string name="label_cliente">Cliente:</string>
 </resources>
