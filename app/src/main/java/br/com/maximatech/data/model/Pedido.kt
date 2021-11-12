@@ -18,7 +18,7 @@ data class Pedido (
     @SerializedName("critica")
     val critica: String? = null,
     @SerializedName("tipo")
-    val tipo: Tipo,
+    val tipo: String,
     @SerializedName("legendas")
     val legendas: List<String>? = null
 )
