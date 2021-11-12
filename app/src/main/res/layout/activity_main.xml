@@ -88,29 +88,29 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:orientation="horizontal">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/app_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            android:fontFamily="@font/santral_bookitalic"
-            android:layout_marginEnd="5dp"/>
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/santral_bookitalic" />
 
         <ImageView
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginEnd="3dp"
-            android:src="@drawable/ic_maxima_nuvem_conectado"/>
+            android:src="@drawable/ic_maxima_nuvem_conectado" />
 
         <ImageView
             android:layout_width="22dp"
             android:layout_height="22dp"
-            android:src="@drawable/ic_maxima_nuvem_desconectado"/>
+            android:src="@drawable/ic_maxima_nuvem_desconectado" />
     </LinearLayout>
 
 

@@ -1,7 +1,6 @@
 package br.com.maximatech.ui.dadosClienteScreen
 
 import android.app.Application
-import android.provider.Settings.Global.getString
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope

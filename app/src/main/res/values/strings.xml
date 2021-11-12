@@ -6,7 +6,6 @@
     <string name="label_ferramentas">Ferramentas</string>
     <string name="loading">Carregando..</string>
     <string name="undefined">Indefinido</string>
-    <string name="error">Falha ao carregar</string>
     <string name="dados_cliente_error_loading">Falha ao carregar os dados do cliente</string>
     <string name="label_email">E-mail:</string>
     <string name="label_celular">Celular:</string>

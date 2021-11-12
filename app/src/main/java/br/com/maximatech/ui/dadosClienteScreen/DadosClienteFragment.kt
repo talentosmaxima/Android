@@ -26,13 +26,10 @@ class DadosClienteFragment : Fragment() {
     ): View {
         binding = FragmentDadosClienteBinding.inflate(inflater, container, false)
         val root = binding.root
-        val stateAction = ViewManagerState(
-            binding.clHistoricoPedidosScreen, binding.btnTentarNovamente, binding.loading
-        )
+
         viewModel = ViewModelProvider(this).get(DadosClienteViewModel::class.java)
+
         adapter = DadosClienteAdapter()
-
-
         binding.rvContatosCliente.layoutManager = LinearLayoutManager(root.context)
         binding.rvContatosCliente.adapter = adapter
 

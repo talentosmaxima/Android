@@ -41,8 +41,4 @@
         <item name="fontFamily">@font/santral_medium</item>
     </style>
 
-    <style name="TextLabelGray.maxApp" parent="Widget.AppCompat.TextView">
-        <item name="android:textColor">@color/text_label_gray</item>
-        <item name="fontFamily">@font/santral_medium</item>
-    </style>
 </resources>

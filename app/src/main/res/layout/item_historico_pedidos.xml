@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,14 +14,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent=".5"/>
+            app:layout_constraintGuide_percent=".5" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/_cv_status_image"
-            android:visibility="gone"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="10dp"
+            android:visibility="gone"
             app:cardCornerRadius="100dp"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -42,105 +42,104 @@
             android:id="@+id/_numero_rca_erp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_numero_ped_rca_erp"
             android:fontFamily="@font/santral_medium"
+            android:text="@string/label_numero_ped_rca_erp"
             app:layout_constraintStart_toEndOf="@id/_cv_status_image"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/numero_rca_erp"
-           style="@style/TextLabelBlack.maxApp"
+            style="@style/TextLabelBlack.maxApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/_numero_rca_erp"
-            app:layout_constraintTop_toTopOf="@id/_numero_rca_erp"
-            />
+            app:layout_constraintTop_toTopOf="@id/_numero_rca_erp" />
 
         <TextView
             android:id="@+id/_cliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/santral_medium"
+            android:text="@string/label_cliente"
             app:layout_constraintStart_toStartOf="@id/_numero_rca_erp"
-            app:layout_constraintTop_toBottomOf="@id/_numero_rca_erp"
-            android:text="@string/label_cliente"/>
+            app:layout_constraintTop_toBottomOf="@id/_numero_rca_erp" />
 
         <TextView
             android:id="@+id/cliente"
+            style="@style/TextLabelBlack.maxApp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:maxLines="2"
             android:textAllCaps="true"
-            app:layout_constraintStart_toEndOf="@id/_cliente"
             app:layout_constraintBottom_toTopOf="@id/status"
-            style="@style/TextLabelBlack.maxApp"
-            app:layout_constraintTop_toTopOf="@id/_cliente"
             app:layout_constraintEnd_toStartOf="@id/legenda0"
-            android:maxLines="2"/>
+            app:layout_constraintStart_toEndOf="@id/_cliente"
+            app:layout_constraintTop_toTopOf="@id/_cliente" />
 
         <TextView
             android:id="@+id/status"
+            style="@style/TextLabelBlack.maxApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@id/_cliente"
-            app:layout_constraintTop_toBottomOf="@id/cliente"
-            style="@style/TextLabelBlack.maxApp"/>
+            app:layout_constraintTop_toBottomOf="@id/cliente" />
 
         <TextView
             android:id="@+id/label_critica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_critica"
-            android:fontFamily="@font/santral_medium"
-            android:visibility="invisible"
             android:layout_margin="3dp"
+            android:fontFamily="@font/santral_medium"
+            android:text="@string/label_critica"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@id/guideline"
-            app:layout_constraintTop_toTopOf="@id/status"/>
+            app:layout_constraintTop_toTopOf="@id/status" />
 
         <ImageView
             android:id="@+id/critica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/label_critica"
             app:layout_constraintStart_toEndOf="@id/label_critica"
-            app:layout_constraintTop_toTopOf="@id/label_critica"
-            app:layout_constraintBottom_toBottomOf="@id/label_critica"/>
+            app:layout_constraintTop_toTopOf="@id/label_critica" />
 
         <TextView
             android:id="@+id/data"
-            android:fontFamily="@font/santral_medium"
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/santral_medium"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/legenda0"
-            app:layout_constraintTop_toBottomOf="@id/data"
-            app:layout_constraintEnd_toEndOf="@id/data"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/data"
+            app:layout_constraintTop_toBottomOf="@id/data" />
 
         <ImageView
             android:id="@+id/legenda1"
-            app:layout_constraintEnd_toStartOf="@id/legenda0"
-            app:layout_constraintTop_toTopOf="@id/legenda0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/legenda0"
+            app:layout_constraintTop_toTopOf="@id/legenda0" />
 
         <ImageView
             android:id="@+id/legenda2"
-            app:layout_constraintEnd_toStartOf="@id/legenda1"
-            app:layout_constraintTop_toTopOf="@id/legenda1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/legenda1"
+            app:layout_constraintTop_toTopOf="@id/legenda1" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
+            android:background="@color/gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@color/gray"
             app:layout_constraintStart_toStartOf="@id/_numero_rca_erp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

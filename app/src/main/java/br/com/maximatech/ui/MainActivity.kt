@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.maximatech.BuildConfig
 import br.com.maximatech.R
 import br.com.maximatech.core.extensions.showSnackbar
-import br.com.maximatech.core.extensions.showSnackbarWithAnchorView
 import br.com.maximatech.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -28,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnPedidos.setOnClickListener {
             NavigationActivity.launchHistoricoPedidosFragment(this)
         }
-        
+
         binding.btnResumosDeVendas.setOnClickListener {
             it.showSnackbar(getString(R.string.label_funcionalidade_ainda_nao_disponivel))
         }

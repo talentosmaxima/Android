@@ -18,13 +18,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/iv_empty_state"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:src="@drawable/maxima_empty_state" />
 
         <TextView
-            android:id="@+id/nada_encontrado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/santral_bold"

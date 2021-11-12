@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.NavigationActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.NavigationActivity">
 
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -18,9 +18,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="@color/background_bottom_nav"
         app:itemIconTint="@drawable/bottom_navigation_selector_colors"
         app:itemTextColor="@drawable/bottom_navigation_selector_colors"
-        android:background="@color/background_bottom_nav"
         app:menu="@menu/bottom_navigation_menu" />
 
 </RelativeLayout>
