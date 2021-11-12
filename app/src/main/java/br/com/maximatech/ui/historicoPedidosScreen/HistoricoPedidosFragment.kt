@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.maximatech.R
-import br.com.maximatech.core.extensions.showSnackbar
+import br.com.maximatech.core.extensions.showSnackbarWithAnchorView
 import br.com.maximatech.ui.State
 import br.com.maximatech.databinding.FragmentHistoricoPedidosBinding
 import br.com.maximatech.databinding.LegendasCustomDialogBinding
@@ -62,7 +62,7 @@ class HistoricoPedidosFragment : Fragment() {
                 }
                 State.ERROR -> {
                     viewManager.error()
-                    view.showSnackbar(
+                    view.showSnackbarWithAnchorView(
                         message = getString(R.string.hist_pedidos_error_loading),
                     )
                 }

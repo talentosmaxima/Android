@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.maximatech.R
-import br.com.maximatech.core.extensions.showSnackbar
+import br.com.maximatech.core.extensions.showSnackbarWithAnchorView
 import br.com.maximatech.data.model.Cliente
 import br.com.maximatech.databinding.FragmentDadosClienteBinding
 import br.com.maximatech.ui.State
@@ -49,7 +49,7 @@ class DadosClienteFragment : Fragment() {
         viewModel.fetchData()
 
         binding.btnVerificarStatus.setOnClickListener {
-            binding.root.showSnackbar(
+            binding.root.showSnackbarWithAnchorView(
                 viewModel.getClientDataStatus()
             )
         }
@@ -70,7 +70,7 @@ class DadosClienteFragment : Fragment() {
                 }
                 State.ERROR -> {
                     viewManagerState.error()
-                    view.showSnackbar(
+                    view.showSnackbarWithAnchorView(
                         message = getString(R.string.dados_cliente_error_loading),
                     )
                 }

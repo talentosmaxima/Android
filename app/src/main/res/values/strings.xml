@@ -44,4 +44,6 @@
     <string name="label_fechar">FECHAR</string>
     <string name="label_status_do_pedido_no_erp">Status do pedido no ERP</string>
     <string name="label_em_proceessamento_por_parte_do_fv">Em proceessamento por parte do FV</string>
+    <string name="label_app_version">v.%1$s</string>
+    <string name="label_funcionalidade_ainda_nao_disponivel">Funcionalidade ainda não disponível! Em breve!</string>
 </resources>

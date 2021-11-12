@@ -21,32 +21,19 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".5" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_top_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.20" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_bottom_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.80" />
-
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_clientes"
         style="@style/Button.maxApp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/label_clientes"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
         app:icon="@drawable/ic_maxima_pessoas"
         app:layout_constraintBottom_toTopOf="@id/gl_center_horizontal"
         app:layout_constraintEnd_toStartOf="@id/gl_center_vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gl_top_horizontal" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_pedidos"
@@ -54,11 +41,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/label_pedidos"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
         app:icon="@drawable/ic_maxima_pedido"
         app:layout_constraintBottom_toTopOf="@id/gl_center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/gl_center_vertical"
-        app:layout_constraintTop_toBottomOf="@id/gl_top_horizontal" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.button.MaterialButton
@@ -67,8 +56,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/label_resumo_de_vendas"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="28dp"
         app:icon="@drawable/ic_maxima_resumo_vendas"
-        app:layout_constraintBottom_toTopOf="@+id/gl_bottom_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/gl_center_vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gl_center_horizontal" />
@@ -80,10 +71,39 @@
         android:layout_height="0dp"
         android:text="@string/label_ferramentas"
         app:icon="@drawable/ic_maxima_ferramentas"
-        app:layout_constraintBottom_toTopOf="@+id/gl_bottom_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/gl_center_vertical"
-        app:layout_constraintTop_toTopOf="@+id/gl_center_horizontal" />
+        app:layout_constraintTop_toTopOf="@+id/gl_center_horizontal"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"/>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:fontFamily="@font/santral_bookitalic"
+            android:layout_marginEnd="5dp"/>
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="3dp"
+            android:src="@drawable/ic_maxima_nuvem_conectado"/>
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_maxima_nuvem_desconectado"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
