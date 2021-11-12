@@ -1,98 +1,89 @@
-## Objetivo
 
-Parabéns, você passou para a segunda fase do processo seletivo da [MáximaTech](https://maximatech.com.br/) para desenvolvedor Android.
+<h1 align="center"> 
+	maxApp
+</h1>
 
-## Instruções
+# Tabela de conteúdos
+<!--ts-->
+   * [Descrição do projeto](#descrição-do-projeto)
+   * [Como utilizar](#como-utilizar)
+		* [Visulização dos dados do cliente](#visualização-dos-dados-do-cliente)
+		* [Visualização do histórico de pedidos](#visualização-do-histórico-de-pedidos)
+		* [Visualização das legendas do histórico de pedidos](#visualização-das-legendas-do-histórico-de-pedidos)
+		* [Visualização dos alvarás](#visualização-dos-alvarás)
+   * [Demonstrações](#demonstrações)
+      * [Splash Screen](#splash-screen)
+      * [Tela principal](#tela-principal)
+      * [Tela dados do cliente](#tela-dados-do-cliente)
+      * [Tela histórico de pedidos](#tela-histórico-de-pedidos)
+      * [Caixa de legendas](#caixa-de-legendas)
+      * [Tela de alvarás](#tela-de-alvarás)
+   * [Arquitetura](#arquitetura)
+	   * [Atual](#atual)
+	   * [Desejável](#desejável)
+   * [Componentes utilizados](#componentes-utilizados)
+<!--te-->
 
-1. Criar um fork deste repositório, transformar ele em privado, adicionar o nosso usuário (talentosmaxima) como colaborador e implementar o aplicativo conforme instruções abaixo.
-2. Arquivos de design e mockups estão contidos nos itens 3.0 a 3.2.
-3. Enviar um e-mail para <talentoshumanos@maximatech.com.br> com:
-	* Assunto "[Teste Desenvolvedor Android] - Nome do candidato"
-	* Link: -> Repositório privado no Github.
+## Descrição do projeto
+Este é um [desafio proposto pela MaximaTech](https://github.com/lucasrmoro/Android/blob/master/README_CHALLENGE.md) pela MaximaTech com o intuito de testar os conhecimentos do indivíduo em Android. O Aplicativo conta com várias telas, dentre elas estão uma para listar os dados do cliente, outra para listar o histórico de pedidos e por fim a lista de alvarás
 
-## 1.0 - O que esperamos?  ;-)
+## Solução
+Desenvolver as funcionalidades e design do aplicativo baseado nos arquivos , imagens, instruções e recomendações deixados pela MaximaTech no seguinte [documento](https://github.com/lucasrmoro/Android/blob/master/README_CHALLENGE.md).
 
-* Um aplicativo Android que faça:
+## Como utilizar
 
-1. Splash
-2. Menu principal    
-	* No menu principal ao tocar na opção Clientes direcionar para a tela Dados do cliente
-3. Dados do cliente	
-	* O botão Verificar status do cliente tem que exibir numa Toast ou snackbar  o status do cliente com a data e hora (tela 3.1)
-	* O BottomNavigationView deve permitir alternar entre as telas de Histórico de pedidos, Alvarás ou Dados do Cliente
-	
-    * Histórico de pedidos
-	    * O menu deve abrir a opção de legendas (tela 3.3)
-	    * A pesquisa deve abrir o campo de pesquisa textual	    	    
-		
-    * Alvarás
-	    * A seta da toolbar deve voltar voltar para a tela anterior	    
+### Visualização dos dados do cliente
+Para visualizar os dados do cliente, pressiona o primeiro botão da tela principal denominado "Clientes".
+&nbsp;
+### Visualização do histórico de pedidos
+Para visualizar o histórico de pedidos, pressione o segundo botão da tela principal denominado "Pedidos".
+&nbsp;
+### Visualização das legendas do histórico de pedidos
+Para visualizar o as legendas do histórico de pedidos, dentro da tela de histórico de pedidos pressione o botão pontilhado no canto superior direito e pressione "Legendas".
+&nbsp;
+### Visualização dos alvarás
+Para visualizar os alvarás você precisará pressionar um dos botões citados acima e navegar pela barra de tarefas inferior do aplicativo, sendo o ultímo botão a direita, denominado "Álvaras".
+&nbsp;
 
-	
-O aplicativo deverá:
-* Reproduzir a interface definida no layout fornecido
-* Consumir o json (clientes.json) por meio de uma requisição http para exibir os dados dos clientes
-* Consumir o json (pedidos.json) por meio de uma requisição http  para listagem de histórico de pedidos
+## Demonstrações
 
+### Splash Screen:
 
-Itens Opcionais:
-* A seta da toolbar deve voltar para o menu principal
-* Snackbar de status
+<img src="https://github.com/lucasrmoro/Android/blob/master/img/splash-screen.jpeg" width="250" height="500" />
 
-3. Dados do cliente	
-    * Histórico de pedidos
-	    * A seta da toolbar deve voltar para a tela anterior
-    * Menu legendas
-	    * O menu Legendas deve abrir o Dialog com as legendas (tela 3.4)	
-    * Dialog Legendas
-	    * Botão Fechar deve fechar o Dialog	
-		
-* Salvar os dados num banco de dados e recuperá-los em caso de falha de conexão
-* Testes unitários e de interfaces
+### Tela principal:
 
-	
-		
-4. Criação de Serviços em Background (Sugestões: WorkManager, JobScheduler, AlarmManager)
-* Desenvolver um serviço em background que cria uma notificação que avisa o usuário a cada 15 minutos para entrar no aplicativo. Ao clicar na notificação o aplicativo deverá ser aberto. 
+<img src="https://github.com/lucasrmoro/Android/blob/master/img/tela-principal.jpeg" width="250" height="500" /> 
 
+### Tela dados do cliente:
 
-## 2.0 - Requisições  REST (Sugestões: Retrofit, HttpURLConnection )
+<img src="https://github.com/lucasrmoro/Android/blob/master/img/tela-dados-do-cliente.gif" width="250" height="500" /> 
 
-A tela abaixo possui o botão **Verificar status do cliente** que é responsável por enviar uma requisição **GET** para o endpoint informado no item 4.0, para retornar o status do cliente. 
+### Tela histórico de pedidos:
 
-![Tela Service](https://github.com/talentosmaxima/Android/blob/master/Design/Screenshots/3.1%20-%20Cadastro%20do%20cliente%20%E2%80%93%20Snackbar%20de%20status.png)
+<img src="https://github.com/lucasrmoro/Android/blob/master/img/tela-hist%C3%B3rico-de-pedidos.gif" width="250" height="500" /> 
 
-Quando o usuário clicar no botão em questão deve-se consultar o status que está armazenado no arquivo json e retornar o texto **Data/Hora - Status cliente**, por exemplo, **10/09/2018 - Status ativo** 
+### Caixa de legendas:
 
+<img src="https://github.com/lucasrmoro/Android/blob/master/img/caixa-legendas.jpeg" width="250" height="500" /> 
 
-Importante salientar que **tudo que você enviar será avaliado**
+### Tela de alvarás:
 
-### 3.0 - Onde estão as coisas? 
+<img src="https://github.com/lucasrmoro/Android/blob/master/img/tela-alvar%C3%A1s.jpeg" width="250" height="500" /> 
 
-### 3.1 - Design 
+## Arquitetura
 
-Todo material pertinente para reproduzir as telas está na pasta *./Design*, recomendamos dar uma olhada no arquivo *./Design/Protótipo maxApp.xd* para verificar dimensões, bordas, cores, estilos e tamanhos corretos.
+### Atual:
 
-<sub>*o Adobe XD é um app pago, mas tem versão free https://www.adobe.com/br/products/xd.html <sub>
-	
-### 3.2 - Arquivos de Design 
+<img src="https://github.com/lucasrmoro/Android/blob/master/img/currently-architecture.png" width="600" height="350" /> 
 
-[Arquivos Design](https://github.com/talentosmaxima/Android/blob/master/Design/Prot%C3%B3tipo-maxApp.pdf)
+### Desejável:
 
-### 4.0 - JSON 
+<img src="https://github.com/lucasrmoro/Android/blob/master/img/final-architecture.png" width="600" height="350" /> 
 
-Os JSONs utilizados nessa avaliação estão hospedados e você pode ver mais informações pelo link [https://maximatech.docs.apiary.io](https://maximatech.docs.apiary.io).
+## Componentes Utilizados
 
-## 5.0 - O que vamos avaliar?
-
-* Organização do projeto
-* Utilização de padrões arquiteturais
-* Clareza do código
-* Escolha de estruturas e bibliotecas
-* Ausência de crashs e bugs
-* Detalhes de UI
-* Linguagem de programação
-
-## Dúvidas
-
-Entre em contato com <talentoshumanos@maximatech.com.br>
+- Kotlin
+- Retrofit
+- Jetpack Components
+- MVVM Architecture
