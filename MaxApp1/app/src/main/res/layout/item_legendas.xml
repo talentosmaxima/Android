@@ -22,7 +22,7 @@
             android:gravity="center_horizontal"
             android:text="Legendas"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
 
         <Space android:layout_width="5dp"
@@ -51,10 +51,10 @@
             android:orientation="horizontal">
             <Button
                 android:id="@+id/bt_status"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/ic_em_process"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:text=""
                 android:textColor="#FFFFFF" />
 
@@ -76,10 +76,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/ic_bt_recus"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:text="!"
                 android:textColor="#FFFFFF" />
 
@@ -100,10 +100,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/ic_bt_pendente"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:text="P"
                 android:textColor="#FFFFFF" />
 
@@ -123,10 +123,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/ic_bt_bloq"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:text="B"
                 android:textColor="#FFFFFF" />
 
@@ -148,11 +148,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/ic_bt_mont"
-                android:textSize="20sp"
-                android:text="B"
+                android:textSize="16sp"
+                android:text="M"
                 android:textColor="#FFFFFF" />
 
             <TextView
@@ -172,11 +172,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/ic_bt_fatur"
-                android:textSize="20sp"
-                android:text="B"
+                android:textSize="16sp"
+                android:text="F"
                 android:textColor="#FFFFFF" />
 
             <TextView
@@ -196,11 +196,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/ic_bt_canc"
-                android:textSize="20sp"
-                android:text="B"
+                android:textSize="16sp"
+                android:text="C"
                 android:textColor="#FFFFFF" />
 
             <TextView
@@ -220,11 +220,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/ic_bt_orc"
-                android:textSize="20sp"
-                android:text="B"
+                android:textSize="16sp"
+                android:text="O"
                 android:textColor="#FFFFFF" />
 
             <TextView
@@ -507,9 +507,9 @@
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="30dp"
                 android:background="@color/mr_cast_meta_default_text_color"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:text="FECHAR"
                 android:id="@+id/btFechar"
                 android:textColor="#64DD17" />
