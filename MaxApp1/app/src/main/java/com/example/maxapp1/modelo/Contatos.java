@@ -4,6 +4,9 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 
@@ -76,7 +79,24 @@ public class Contatos {
     }
 
     public void setData_nascimento(String data_nascimento) {
-        this.data_nascimento = data_nascimento;
+        if(data_nascimento!=null) {
+
+            SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+
+            Calendar calendar = Calendar.getInstance();
+            try {
+                Date data = formato.parse(data_nascimento);
+                calendar.setTimeInMillis(data.getTime());
+                this.data_nascimento = calendar.get(Calendar.DAY_OF_MONTH) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.YEAR);
+
+            } catch (ParseException e) {
+                this.data_nascimento = "";
+
+                e.printStackTrace();
+            }
+
+        }
+
     }
 
     public String getDataNascimentoConjuge() {
@@ -84,7 +104,22 @@ public class Contatos {
     }
 
     public void setDataNascimentoConjuge(String dataNascimentoConjuge) {
-        this.dataNascimentoConjuge = dataNascimentoConjuge;
+
+        if(dataNascimentoConjuge!=null) {
+            SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+
+            Calendar calendar = Calendar.getInstance();
+            try {
+                Date data = formato.parse(dataNascimentoConjuge);
+                calendar.setTimeInMillis(data.getTime());
+                this.dataNascimentoConjuge = calendar.get(Calendar.DAY_OF_MONTH) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.YEAR);
+                ;
+
+            } catch (ParseException e) {
+                this.dataNascimentoConjuge = dataNascimentoConjuge;
+
+            }
+        }
     }
 
 

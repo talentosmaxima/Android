@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.example.maxapp1.controller.ClienteRest;
 import com.example.maxapp1.modelo.Cliente;
 import com.example.maxapp1.modelo.Contatos;
+import com.example.maxapp1.recursos.Mascara;
 
 
 public class BDCliente {
@@ -90,58 +91,13 @@ public class BDCliente {
             Contatos ct = new Contatos();
             ct.setNome(cursor.getString(9));
             ct.setTelefone(cursor.getString(10));
-            ct.setCelular(cursor.getString(11));
-            ct.setConjuge(cursor.getString(12));
-            ct.setTipo(cursor.getString(13));
-            ct.setTime(cursor.getString(14));
-            ct.setE_mail(cursor.getString(15));
-            ct.setData_nascimento(cursor.getString(16));
-            ct.setDataNascimentoConjuge(cursor.getString(17));
-            c.setContatosL(ct);
-
-            cursor.close();
-
-        }else {
-            if(Conectado.estaConectado){
-                ClienteRest cr = new ClienteRest(context);
-                c= cr.buscarClienteWeb();
-
-            }
-            else {
-                Toast.makeText(context,"Não ha conexão com a internet",Toast.LENGTH_LONG).show();
-
-            }
-        }
-
-        return c;
-
-    }
 
 
-    public Cliente buscarx() {
-        boolean tem;
-        Cliente c=null ;
-        Cursor cursor = db.rawQuery("SELECT c.id,c.codigo, c.razao_social,c.nomeFantasia, c.cnpj, c.ramo_atividade,c.endereco,c.status," +
-                "ct.id_cliente, ct.nome, ct.telefone,ct.celular,ct.conjuge,ct.tipo,ct.time,ct.e_mail,ct.data_nascimento," +
-                "ct.data_nascimentoConjuge FROM cliente c INNER JOIN contatos ct ON  c.id = ct.id_cliente", null);
-        cursor.moveToNext();
-        tem = cursor.getCount() > 0;
+            Mascara formatarFone = new Mascara();
 
-        if(tem) {
-            c = new Cliente();
-            c.setId(cursor.getString(0));
-            c.setCodigo(cursor.getString(1));
-            c.setRazao_social(cursor.getString(2));
-            c.setNomeFantasia(cursor.getString(3));
-            c.setCnpj(cursor.getString(4));
-            c.setRamo_atividade(cursor.getString(5));
-            c.setEndereco(cursor.getString(6));
-            c.setStatus(cursor.getString(7));
+            String cel = formatarFone.Mascara("(##)#####-####",cursor.getString(11));
 
-            Contatos ct = new Contatos();
-            ct.setNome(cursor.getString(9));
-            ct.setTelefone(cursor.getString(10));
-            ct.setCelular(cursor.getString(11));
+            ct.setCelular(cel);
             ct.setConjuge(cursor.getString(12));
             ct.setTipo(cursor.getString(13));
             ct.setTime(cursor.getString(14));

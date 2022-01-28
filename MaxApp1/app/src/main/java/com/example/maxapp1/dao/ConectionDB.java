@@ -1,9 +1,10 @@
 package com.example.maxapp1.dao;
-import android.content.ContentValues;
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
+
 import java.io.File;
 import java.util.Calendar;
 import java.util.Date;
@@ -50,6 +51,20 @@ public class ConectionDB extends SQLiteOpenHelper {
                 "data_nascimentoConjuge text );");
 
 
+        db.execSQL("create table pedido(" +
+                "numero_ped_Rca integer  ," +
+                "numero_ped_erp text  ," +
+                "codigoCliente text  ," +
+                "NOMECLIENTE text ," +
+                "data text  ," +
+                "status text  ," +
+                "critica text  ," +
+                "legendas text  ," +
+                "tipo text  );");
+
+        db.execSQL("create table legenda(" +
+                "numero_ped_Rca integer  ," +
+                "legenda text );");
 
 
         Calendar calendar = Calendar.getInstance();

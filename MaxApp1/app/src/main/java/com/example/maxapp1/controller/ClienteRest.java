@@ -4,11 +4,15 @@ import android.content.Context;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.maxapp1.dao.BDCliente;
 import com.example.maxapp1.interfaces.ClienteInterface;
 import com.example.maxapp1.modelo.Cliente;
+import com.example.maxapp1.recursos.GerarAviso;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.util.Date;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,7 +40,7 @@ public class ClienteRest extends AppCompatActivity {
 
         final Cliente[] cliente = new Cliente[1];
         Gson gson = new GsonBuilder().registerTypeAdapter(Cliente.class,new ClienteDeserialize()).create();
-        String Api = "https://private-anon-dad125ebbf-maximatech.apiary-mock.com/";
+        String Api = "https://private-anon-dbb28d1a0a-maximatech.apiary-mock.com/";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Api)
                 .addConverterFactory(GsonConverterFactory.create(gson)).build();
@@ -58,6 +62,10 @@ public class ClienteRest extends AppCompatActivity {
                 Log.e("ClienteInterface   ", "Erro ao buscar o cliente:" + t.getMessage());
             }
         });
+        Date data = new Date ();
+        data.setTime (data.getTime () + 900000);
+        GerarAviso avisox = new GerarAviso (context);
+        avisox.AgendarNotificacao (data,"MaxApp","Notificação importante!" ,152260);
 
         return null;
     }

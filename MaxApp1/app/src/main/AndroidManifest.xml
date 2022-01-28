@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.maxapp1">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" ></uses-permission>
+    <uses-permission
+        android:name="android.permission.SEND_RESPOND_VIA_MESSAGE"
+        tools:ignore="ProtectedPermissions" />
     <application
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:allowBackup="true"
@@ -13,13 +24,17 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         >
+        <receiver
+            android:name=".recursos.CriarNotificacao"
+            android:exported="true"
+            tools:ignore="WrongManifestParent" />
         <activity
             android:name=".view.MenuClientes"
             android:screenOrientation="portrait"
 
-        android:label="@string/title_activity_menu_clientes"
+            android:label="@string/title_activity_menu_clientes"
             android:parentActivityName=".view.MainActivity"></activity>
-           <activity
+        <activity
             android:name=".view.Splash"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -32,6 +47,10 @@
             android:theme="@style/AppTheme"
 
             />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

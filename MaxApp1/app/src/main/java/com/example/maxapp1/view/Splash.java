@@ -1,14 +1,13 @@
 package com.example.maxapp1.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.maxapp1.R;
-import com.example.maxapp1.view.MainActivity;
 
 public class Splash extends AppCompatActivity {
 

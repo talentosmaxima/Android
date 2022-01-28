@@ -3,22 +3,11 @@ package com.example.maxapp1.view;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.SearchView;
-
-import com.example.maxapp1.R;
-import com.example.maxapp1.controller.ClienteDeserialize;
-import com.example.maxapp1.interfaces.ClienteInterface;
-import com.example.maxapp1.modelo.Cliente;
-import com.example.maxapp1.ui.dashboard.DashboardFragment;
-import com.example.maxapp1.ui.home.HomeFragment;
-import com.example.maxapp1.ui.notifications.NotificationsFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,13 +20,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import java.util.Objects;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import com.example.maxapp1.R;
+import com.example.maxapp1.ui.dashboard.DashboardFragment;
+import com.example.maxapp1.ui.home.HomeFragment;
+import com.example.maxapp1.ui.notifications.NotificationsFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MenuClientes extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -53,11 +40,16 @@ public class MenuClientes extends AppCompatActivity implements BottomNavigationV
         //  getSupportActionBar().hide();
         // getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_menu_clientes);
+        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        float h = displayMetrics.heightPixels;
+        float w = displayMetrics.widthPixels;
 
         myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
         navView = findViewById(R.id.nav_view);
+
+
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -66,9 +58,15 @@ public class MenuClientes extends AppCompatActivity implements BottomNavigationV
                 .build();
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
         navView.setOnNavigationItemSelectedListener(this);
+
+
+
+
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -99,8 +97,24 @@ public class MenuClientes extends AppCompatActivity implements BottomNavigationV
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.popBackStack();
 
+        menux.findItem(R.id.legendas).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                final LegendasView legendasView = new LegendasView(getBaseContext());
+                legendasView.enviarAlerta ().show ();
 
-        return super.onCreateOptionsMenu(menu);
+                legendasView.getBtFechar().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        legendasView.fechar();
+
+                    }
+                });
+                return false;
+            }
+        });
+
+         return super.onCreateOptionsMenu(menu);
     }
 
 

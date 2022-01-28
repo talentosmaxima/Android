@@ -1,9 +1,8 @@
 package com.example.maxapp1.modelo;
 
-import java.io.Serializable;
-import java.util.Objects;
+ import java.io.Serializable;
 
-public class Cliente {
+public class Cliente implements Serializable {
 
       private String id ,codigo;
        private  String razao_social,nomeFantasia,cnpj, ramo_atividade,endereco,status;

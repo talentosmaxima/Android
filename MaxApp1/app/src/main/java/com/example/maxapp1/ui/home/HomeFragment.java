@@ -2,47 +2,22 @@ package com.example.maxapp1.ui.home;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.maxapp1.R;
-import com.example.maxapp1.controller.ClienteDeserialize;
 import com.example.maxapp1.controller.ClienteRest;
 import com.example.maxapp1.controller.DataHora;
-import com.example.maxapp1.dao.BDCliente;
 import com.example.maxapp1.dao.Conectado;
-import com.example.maxapp1.interfaces.ClienteInterface;
 import com.example.maxapp1.modelo.Cliente;
-import com.example.maxapp1.ui.dashboard.DashboardFragment;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeFragment extends Fragment {
     @Override
@@ -55,6 +30,7 @@ try {
     ClienteRest clienteRest = new ClienteRest(view.getContext());
 
     final Cliente cliente = clienteRest.getBuscarCliente();
+
     if(cliente==null && Conectado.conectado()){
         AlertDialog.Builder alerta = new AlertDialog.Builder(view.getContext());
         alerta.setTitle("Via REST");
@@ -74,6 +50,8 @@ try {
         AlertDialog alertDialog = alerta.create();
         alertDialog.show();
     }
+
+
     TextView txCodigoNomeRsocial = (TextView) view.findViewById(R.id.txCodigoNomeRsocial);
     txCodigoNomeRsocial.setText(cliente.getCodigo() + " - " + cliente.getRazao_social());
 
@@ -85,6 +63,9 @@ try {
     txEndereco.setText(cliente.getEndereco());
     TextView txNomeFantasia = (TextView) view.findViewById(R.id.txNomeFantasia);
     txNomeFantasia.setText(cliente.getNomeFantasia());
+
+
+
 
     TextView txNomeContato = (TextView) view.findViewById(R.id.txNomeContato);
     txNomeContato.setText(cliente.getContatos()[0].getNome());
@@ -101,6 +82,7 @@ try {
     TextView txEmail = (TextView) view.findViewById(R.id.txEmail);
     txEmail.setText(cliente.getContatos()[0].getE_mail());
     TextView txDataN = (TextView) view.findViewById(R.id.txDataN);
+
     txDataN.setText(cliente.getContatos()[0].getData_nascimento());
     TextView txDataNConjugue = (TextView) view.findViewById(R.id.txDataNConjugue);
     txDataNConjugue.setText(cliente.getContatos()[0].getDataNascimentoConjuge());
@@ -119,6 +101,7 @@ try {
     });
 
 }catch (Exception e) {
+
 }
 
         return view;

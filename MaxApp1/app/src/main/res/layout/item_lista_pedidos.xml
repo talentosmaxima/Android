@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:id="@+id/bgLista">
+
+
+    <Button
+        android:id="@+id/bt_status"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_bt_em_proc"
+android:textSize="20sp"
+        android:text="1"
+
+        android:textColor="#FFFFFF" />
+    <Space android:layout_width="5dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/idn"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Nº Ped.RCA/ERP "
+                android:textSize="12sp"
+
+                />
+            <TextView
+                android:id="@+id/RCA_ERP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="836.555.55/76844.455.44"
+                android:textSize="12sp"
+                />
+            <Space android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"/>
+            <TextView
+                android:id="@+id/dataPedido"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="01 JUN"
+                android:textSize="12sp"
+
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/idn2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Cliente: "
+                android:textSize="12sp"
+
+                />
+            <TextView
+                android:id="@+id/clienteNumNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                android:text="836-346-DONA DONA" />
+            <Space android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/legendasLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <Space android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal"/>
+                <ImageView
+                    android:id="@+id/PEDIDO_SOFREU_CORTE"
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    app:srcCompat="@drawable/ic_maxima_legenda_corte"
+                     android:gravity="right"
+
+                    android:visibility="invisible"
+                    />
+                <Space android:layout_width="5dp"
+                     android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal"/>
+                <ImageView
+                    android:id="@+id/PEDIDO_FEITO_TELEMARKETING"
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    app:srcCompat="@drawable/ic_maxima_legenda_telemarketing"
+                     android:visibility="invisible"
+                    android:gravity="right"
+
+                    />
+                <Space android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal"/>
+                <ImageView
+                    android:id="@+id/PEDIDO_CANCELADO_ERP"
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    app:srcCompat="@drawable/ic_maxima_legenda_cancelamento"
+                     android:visibility="invisible"
+                    android:gravity="right"
+
+                    />
+                <Space android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal"/>
+                <ImageView
+                    android:id="@+id/PEDIDO_COM_FALTA"
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    app:srcCompat="@drawable/ic_maxima_legenda_falta"
+                     android:visibility="invisible"
+
+                    />
+                <Space android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal"/>
+                <ImageView
+                    android:id="@+id/PEDIDO_COM_DEVOLUÇÃO"
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    app:srcCompat="@drawable/ic_maxima_legenda_devolucao"
+                     android:visibility="invisible"
+                    android:gravity="right"
+
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/processo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Processado"
+                android:textSize="12sp"
+
+                />
+            <Space android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"/>
+            <TextView
+                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Crítica: "
+                android:textSize="12sp"/>
+            <ImageView
+                android:id="@+id/criticaimg"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                app:srcCompat="@drawable/ic_maxima_critica_sucesso"
+                 />
+            <Space android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal"/>
+            <TextView
+                android:id="@+id/preco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="15dp"
+                android:textSize="12sp"
+
+                android:text="R$678,00" />
+        </LinearLayout>
+        <Space android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:orientation="horizontal"/>
+    </LinearLayout>
+</LinearLayout>

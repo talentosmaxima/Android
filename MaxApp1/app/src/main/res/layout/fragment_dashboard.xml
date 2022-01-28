@@ -1,15 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#FFFFFF"
-    >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="Hist.Pedidos" />
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="left"
+    android:orientation="vertical"
 
-</LinearLayout>
+    tools:ignore="MissingDefaultResource">
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recicleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+</ScrollView>
