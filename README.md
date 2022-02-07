@@ -33,6 +33,7 @@ O aplicativo deverá:
 * Reproduzir a interface definida no layout fornecido
 * Consumir o json (clientes.json) por meio de uma requisição http para exibir os dados dos clientes
 * Consumir o json (pedidos.json) por meio de uma requisição http  para listagem de histórico de pedidos
+* Salvar os dados em um banco de dados e usar para exibir mesmo offline.
 
 
 Itens Opcionais:
@@ -46,8 +47,7 @@ Itens Opcionais:
 	    * O menu Legendas deve abrir o Dialog com as legendas (tela 3.4)	
     * Dialog Legendas
 	    * Botão Fechar deve fechar o Dialog	
-		
-* Salvar os dados num banco de dados e recuperá-los em caso de falha de conexão
+
 * Testes unitários e de interfaces
 
 	
@@ -65,25 +65,32 @@ A tela abaixo possui o botão **Verificar status do cliente** que é responsáve
 Quando o usuário clicar no botão em questão deve-se consultar o status que está armazenado no arquivo json e retornar o texto **Data/Hora - Status cliente**, por exemplo, **10/09/2018 - Status ativo** 
 
 
-Importante salientar que **tudo que você enviar será avaliado**
+## 3.0 - Persistencia de Dados (Sugestão: SQLite, realmDB)
 
-### 3.0 - Onde estão as coisas? 
+A persistencia de dados tem como objetivo permitir que os dados estejam disponíveis de maneira OFFLINE, bastando que uma primeira conexão seja realizada.
 
-### 3.1 - Design 
+O app deve possuir um CRUD para os dados de Cliente, Contatos e Histórico de pedidos. 
+(Dica: Seria interessante estabelecer um relacionamento entre Cliente e Contatos.)
+ 
+Importante salientar que **tudo que você enviar será avaliado e valorizamos muito a implementação dos itens opcionais**.
+
+### 4.0 - Onde estão as coisas? 
+
+### 4.1 - Design 
 
 Todo material pertinente para reproduzir as telas está na pasta *./Design*, recomendamos dar uma olhada no arquivo *./Design/Protótipo maxApp.xd* para verificar dimensões, bordas, cores, estilos e tamanhos corretos.
 
 <sub>*o Adobe XD é um app pago, mas tem versão free https://www.adobe.com/br/products/xd.html <sub>
 	
-### 3.2 - Arquivos de Design 
+### 4.2 - Arquivos de Design 
 
 [Arquivos Design](https://github.com/talentosmaxima/Android/blob/master/Design/Prot%C3%B3tipo-maxApp.pdf)
 
-### 4.0 - JSON 
+### 5.0 - JSON 
 
 Os JSONs utilizados nessa avaliação estão hospedados e você pode ver mais informações pelo link [https://maximatech.docs.apiary.io](https://maximatech.docs.apiary.io).
 
-## 5.0 - O que vamos avaliar?
+## 6.0 - O que vamos avaliar?
 
 * Organização do projeto
 * Utilização de padrões arquiteturais
